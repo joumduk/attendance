@@ -8,7 +8,8 @@ import { NavController } from 'ionic-angular';
 export class QrcodePage {
 
   constructor(public navCtrl: NavController) {
-
+      
   }
+
 
 }

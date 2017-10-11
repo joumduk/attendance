@@ -8,10 +8,28 @@
 
 <ion-content>
   <ion-list>
-    <ion-list-header>Profile</ion-list-header>
     <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
+      <div style="margin:1px;border:1px solid #ddd;border-radius:5px;padding:5px 10px;">
+        <p>
+          <ion-icon name="ionic" item-start></ion-icon>Peter kim
+        </p>
+      </div>
+    </ion-item>
+    <ion-item>
+      <div style="margin:1px;border:1px solid #ddd;border-radius:5px;padding:5px 10px;">
+        <ul style="list-style:none;padding-left:0;line-height:25px;">
+          <li>School : P High school</li>
+          <li>No of Students : 50</li>
+          <li>teacher in charge : 5-5</li>
+          <li>Email : joumduk@gmail.com</li>
+        </ul>
+      </div>
+    </ion-item>
+    <ion-item>
+        <button [navPush]="report" type="button" style="width:100%;border-radius:5px;background:#1E90FF;color:#fff;padding:10px;font-size:20px;">Report</button>
+      </ion-item>
+    <ion-item>
+      <button type="button" style="width:100%;border-radius:5px;background:red;color:#fff;padding:10px;font-size:20px;">Sign Out</button>
     </ion-item>
   </ion-list>
 </ion-content>

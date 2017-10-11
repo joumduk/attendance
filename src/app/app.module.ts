@@ -2,9 +2,10 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
 
 
+import { StudentReportPage } from '../pages/student_report/student_report';
+import { ReportPage } from '../pages/report/report';
 import { StudentsPage } from '../pages/students/students';
 import { ProfilePage } from '../pages/profile/profile';
 import { QrcodePage } from '../pages/qrcode/qrcode';
@@ -19,6 +20,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     QrcodePage,
     ProfilePage,
     StudentsPage,
+    ReportPage,
+    StudentReportPage,
     TabsPage
   ],
   imports: [
@@ -31,6 +34,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     QrcodePage,
     ProfilePage,
     StudentsPage,
+    ReportPage,
+    StudentReportPage,
     TabsPage
   ],
   providers: [
