@@ -38,7 +38,7 @@ $ sudo npm install -g ionic cordova
 Install ionic to your device 
 
 ```bash
-$ git  clone https://github.com/joumduk/attendance.git
+$ git clone https://github.com/joumduk/attendance.git
 $ cd attendance
 $ ionic serve
 ```
