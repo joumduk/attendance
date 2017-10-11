@@ -33,9 +33,16 @@ When the teacher check attendance by this application, it will send SMS message 
 
 ```bash
 $ sudo npm install -g ionic cordova
+```
+
+Install ionic to your device 
+
+```bash
 $ git  clone https://github.com/joumduk/attendance.git
+$ cd attendance
 $ ionic serve
 ```
-Then, to run it, cd into `attendance` and run:
+Then, to download from our repository by git 
+to run it, cd into `attendance` and run:
 
 
