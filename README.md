@@ -42,7 +42,7 @@ $ git clone https://github.com/joumduk/attendance.git
 $ cd attendance
 $ ionic serve
 ```
-Then, to download from our repository by git 
+Then, to download from our repository by git <Br>
 to run it, cd into `attendance` and run:
 
 
