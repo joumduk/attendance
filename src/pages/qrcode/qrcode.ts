@@ -3,9 +3,9 @@ import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'qrcode.html'
 })
-export class HomePage {
+export class QrcodePage {
 
   constructor(public navCtrl: NavController) {
 
