@@ -15,8 +15,10 @@ When the teacher check attendance by this application, it will send SMS message 
  <li>Users who are teacher register student information with thier parent information to this application</li>
  <li>Generate QR Code of students</li>
  <li>Users scan QR Code of students by Camera</li> 
+ <li>Application send SMS message to parents  </li>
  <li>Application supports report of each student attendance with date </li>
  <li>Application supports report of all student attendance list </li>
+ 
  </ul>
 
 
@@ -28,6 +30,7 @@ When the teacher check attendance by this application, it will send SMS message 
 - Angular2+
 - Firebase
 - QR Code
+- ZSMS Notification
 
 ## How to use this Applcation
 
