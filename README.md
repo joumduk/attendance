@@ -1,10 +1,10 @@
-<h2>Hybrid application development</h2>
+<h2>Attendance Notification - SMS</h2>
 
-This application is term project of Hybrid application development
 
+<h3>Contributors</h3>
 Kwangmin Kim 5738001
 
-<h3>Attendance Notification</h3>
+<h3>Description</h3>
 
 This applcation provides notice attendance of stduent to their parents 
 When the teacher check attendance by this application, it will send SMS message to their parents .
@@ -48,4 +48,5 @@ $ ionic serve
 Then, to download from our repository by git <Br>
 to run it, cd into `attendance` and run:
 
+<h3>Known issues and bugs</h3>
 
