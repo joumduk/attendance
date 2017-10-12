@@ -50,3 +50,6 @@ to run it, cd into `attendance` and run:
 
 <h3>Known issues and bugs</h3>
 
+- SMS message is not free that can occure error from less balance
+- I should combine between QR code reader and checking attendance
+
