@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { StudentReportPage } from '../student_report/student_report';
 @Component({
-  selector: 'page-about',
+  selector: 'page-students',
   templateUrl: 'students.html'
 })
 export class StudentsPage {

@@ -1,3 +1,17 @@
 page-students {
-
+ .student_card{
+    border:1px solid #ddd;padding:10px;border-radius:5px;
+ }
+ .student_class{
+    float:right;color:#ddd
+ }
+ .arrival_time{
+    float:right;color:#333
+ }
+ .parents_form{
+     color:blue;
+ }
+ .parents_info{
+    float:right;color:#333
+ }
 }

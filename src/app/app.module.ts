@@ -4,6 +4,8 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 
+
+
 import { StudentReportPage } from '../pages/student_report/student_report';
 import { ReportPage } from '../pages/report/report';
 import { StudentsPage } from '../pages/students/students';
@@ -24,6 +26,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ReportPage,
     CalendarPage,
     StudentReportPage,
+  
     TabsPage
   ],
   imports: [
@@ -39,6 +42,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ReportPage,
     CalendarPage,
     StudentReportPage,
+  
     TabsPage
   ],
   providers: [
