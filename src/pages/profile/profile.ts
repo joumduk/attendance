@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { ReportPage } from '../report/report';
+import { CalendarPage } from '../calendar/calendar';
 
 @Component({
   selector: 'page-profile',
   templateUrl: 'profile.html'
 })
 export class ProfilePage {
-  report=ReportPage
+  calendar=CalendarPage
   constructor(public navCtrl: NavController) {
 
   }
