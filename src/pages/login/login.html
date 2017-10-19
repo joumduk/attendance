@@ -1,0 +1,41 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form #loginForm="ngForm" (ngSubmit)="login()" autocomplete="off">
+    <ion-row>
+      <ion-col>
+        <ion-list inset>
+          <ion-item>
+            <ion-input placeholder="Email" name="username" id="loginField" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"  type="text" required [(ngModel)]="userdata.email" #email></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="Password" name="password" id="passwordField" type="password" required [(ngModel)]="userdata.password"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+
+        <button ion-button class="submit-btn" full type="submit" [disabled]="!loginForm.form.valid">Login
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button class="submit-btn" full type="button" (click)="GotoSignup()">Sign Up
+        </button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

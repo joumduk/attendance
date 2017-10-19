@@ -1,0 +1,39 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>New Student</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form #loginForm="ngForm" (ngSubmit)="addstudent();" autocomplete="off">
+    <ion-row>
+      <ion-col>
+        <ion-list inset>
+          <ion-item>
+            <ion-input placeholder="Name" name="name" id="name" type="text" required [(ngModel)]="student.name"  clearInput="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="Class" name="class" id="class" type="text" required [(ngModel)]="student.class"  clearInput="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="Parent Name" name="parent_name" id="parent_name" type="text" required [(ngModel)]="student.parent_name"  clearInput="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="Parent Tel" name="parent_tel" id="parent_tel" type="text" required [(ngModel)]="student.parent_tel"  clearInput="true"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+        <button ion-button class="submit-btn" full type="submit" [disabled]="!loginForm.form.valid">Sign Up
+        </button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

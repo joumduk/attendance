@@ -6,64 +6,34 @@
 
 <ion-content>
     <ion-list>
-        <ion-item [navPush]="student_report">
+        <ion-item>
             <div clasee="student_info">
                 <p>
-                    PETER KIM
-                    <span class="student_class">5-5</span>
+                    {{ student?.name }}
+                    <span class="student_class">{{ student?.class }}</span>
                 </p>
                 <hr>
-                <p>Arrival time :
-                    <span class="arrival_time">9:00</span>
+                <p>Regist Date :
+                    <span class="arrival_time">{{ student?.add_date }}</span>
                 </p>
                 <p class="parents_form">Parents :
-                    <span class="parents_info">kon kim [ 092 5487 5784]</span>
+                    <span class="parents_info">{{ student?.parent_name }} [ {{ student?.parent_tel }} ]</span>
                 </p>
             </div>
         </ion-item>
         <ion-item>
-            <div class="QRcode">
-                <img src="/assets/Qr-code-ver-10.png">
-
-            </div>
+            <ion-card *ngIf="createdCode">
+                <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+                <ion-card-content>
+                </ion-card-content>
+            </ion-card>
         </ion-item>
-        <ion-item>
-            <ion-label>23 / 5 / 2017</ion-label>
+        <ion-item *ngFor="let attendance of attendances | async">
+            <ion-label>{{attendance.arrival_time}}</ion-label>
             <ion-checkbox checked="true"></ion-checkbox>
         </ion-item>
         <ion-item>
-            <ion-label>30 / 5 / 2017</ion-label>
-            <ion-checkbox checked="true"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>01 / 6 / 2017</ion-label>
-            <ion-checkbox></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>08 / 6 / 2017</ion-label>
-            <ion-checkbox checked="true"></ion-checkbox>
-        </ion-item>
-
-        <ion-item>
-            <ion-label>14 / 6 / 2017</ion-label>
-            <ion-checkbox></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>15 / 6 / 2017</ion-label>
-            <ion-checkbox checked="true"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>20 / 6 / 2017</ion-label>
-            <ion-checkbox checked="true"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>20 / 7 / 2017</ion-label>
-            <ion-checkbox checked="true"></ion-checkbox>
-        </ion-item>
-
-        <ion-item>
-            <ion-label>25 / 7 / 2017</ion-label>
-            <ion-checkbox></ion-checkbox>
+            <button class="btn-red" (click)="removeStudent()">Remove this student</button>
         </ion-item>
     </ion-list>
 </ion-content>

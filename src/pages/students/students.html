@@ -8,78 +8,21 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item [navPush]="student_report">
+    <ion-item>
+        <button [navPush]="newstudentpage" type="button" class="btn-blue">New Students</button>
+      </ion-item>
+    <ion-item (click)="pushPage(student.student_id)" *ngFor="let student of students | async">
       <div class="student_card">
         <p>
-          PETER KIM
-          <span class="student_class">5-5</span>
+          {{student.name}}
+          <span class="student_class">{{student.class}}</span>
         </p>
         <hr>
-        <p>Arrival time :
-          <span class="arrival_time">9:00</span>
+        <p>Regist Date :
+          <span class="arrival_time">{{student.add_date}}</span>
         </p>
-        <p class="parents_form" >Parents :
-          <span class="parents_info" >kon kim [ 092 5487 5784]</span>
-        </p>
-      </div>
-    </ion-item>
-    <ion-item [navPush]="student_report">
-      <div class="student_card">
-        <p>
-          Kasper 
-          <span class="student_class">5-5</span>
-        </p>
-        <hr>
-        <p>Arrival time :
-          <span class="arrival_time">9:50</span>
-        </p>
-        <p class="parents_form" >Parents :
-          <span class="parents_info" >eli [ 092 1234 5122]</span>
-        </p>
-      </div>
-    </ion-item>
-    <ion-item [navPush]="student_report">
-      <div class="student_card">
-        <p>
-          Pasi
-          <span class="student_class">5-5</span>
-        </p>
-        <hr>
-        <p>Arrival time :
-          <span class="arrival_time">9:30</span>
-        </p>
-        <p class="parents_form" >Parents :
-          <span class="parents_info" >kon kim [ 092 3742 6123]</span>
-        </p>
-      </div>
-    </ion-item>
-    <ion-item [navPush]="student_report">
-      <div class="student_card">
-        <p>
-          PETER KIM
-          <span class="student_class">5-5</span>
-        </p>
-        <hr>
-        <p>Arrival time :
-          <span class="arrival_time">9:00</span>
-        </p>
-        <p class="parents_form" >Parents :
-          <span class="parents_info" >kon kim [ 092 5487 5784]</span>
-        </p>
-      </div>
-    </ion-item>
-    <ion-item [navPush]="student_report">
-      <div class="student_card">
-        <p>
-          PETER KIM
-          <span class="student_class">5-5</span>
-        </p>
-        <hr>
-        <p>Arrival time :
-          <span class="arrival_time">9:00</span>
-        </p>
-        <p class="parents_form" >Parents :
-          <span class="parents_info" >kon kim [ 092 5487 5784]</span>
+        <p class="parents_form">Parents :
+          <span class="parents_info">{{student.parent_name}} [ {{student.parent_tel}} ]</span>
         </p>
       </div>
     </ion-item>

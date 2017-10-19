@@ -11,25 +11,25 @@
     <ion-item>
       <div class="user_info">
         <p>
-          <ion-icon name="ionic" item-start></ion-icon>Peter kim
+          <ion-icon name="ionic" item-start></ion-icon>{{ user?.name }}
         </p>
       </div>
     </ion-item>
     <ion-item>
       <div class="card">
         <ul>
-          <li>School : P High school</li>
-          <li>No of Students : 50</li>
-          <li>teacher in charge : 5-5</li>
-          <li>Email : joumduk@gmail.com</li>
+          <li>School : {{ user?.school }}</li>
+          <li>No of Students : {{ (students | async)?.length }}</li>
+          <li>teacher in charge : {{ user?.class }}</li>
+          <li>Email : {{ user?.email }}</li>
         </ul>
       </div>
     </ion-item>
     <ion-item>
-        <button [navPush]="calendar" type="button" class="btn-blue">Report</button>
-      </ion-item>
+      <button [navPush]="calendar" type="button" class="btn-blue">Report</button>
+    </ion-item>
     <ion-item>
-      <button type="button" class="btn-red">Sign Out</button>
+      <button (click)="logout()" type="button" class="btn-red">Sign Out</button>
     </ion-item>
   </ion-list>
 </ion-content>

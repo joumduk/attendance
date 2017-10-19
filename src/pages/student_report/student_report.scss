@@ -1,9 +1,10 @@
-page-studuent-report {
+page-student-report {
     .student_info{
         border:1px solid #ddd;
         padding:10px;
         border-radius:5px;
-        
+        font-weight: bold;
+        color:#333;
     }
     .student_class {
         float:right;

@@ -1,18 +1,35 @@
 page-profile {
     .user_info{
         margin:1px;
-        order:1px solid #ddd;border-radius:5px;padding:5px 10px
+        order:1px solid #ddd;
+        border-radius:5px;
+        padding:5px 10px;
     }
     .card{
-        margin:1px;border:1px solid #ddd;border-radius:5px;padding:5px 10px
+        margin:1px;
+        border:1px solid #ddd;
+        border-radius:5px;
+        padding:5px 10px;
     }
     .cart ul{
-        list-style:none;padding-left:0;line-height:25px
+        list-style:none;
+        padding-left:0;
+        line-height:25px;
     }
     .btn-blue{
-        width:100%;border-radius:5px;background:#1E90FF;color:#fff;padding:10px;font-size:20px;
+        width:100%;
+        border-radius:5px;
+        background:#1E90FF;
+        color:#fff;
+        padding:10px;
+        font-size:20px;
     }
     .btn-red{
-        width:100%;border-radius:5px;background:red;color:#fff;padding:10px;font-size:20px
+        width:100%;
+        border-radius:5px;
+        background:red;
+        color:#fff;
+        padding:10px;
+        font-size:20px
     }
 }
