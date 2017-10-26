@@ -8,6 +8,7 @@ import { Attendance } from '../../model/attendance';
 import { StudentService } from '../../service/student.service';
 import { AttendanceService } from '../../service/attendance.service';
 
+import { StudentsPage } from '../students/students'
 
 
 @Component({
@@ -32,6 +33,7 @@ export class StudentReportPage {
   removeStudent(){
     var student_id = this.navParams.get('student_id'); 
     this.studentService.removeStudent(student_id);
+    this.navCtrl.setRoot(StudentsPage);
   }
  
 }

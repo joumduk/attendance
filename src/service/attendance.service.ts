@@ -10,7 +10,11 @@ import { Attendance } from "../model/attendance";
 export class AttendanceService {
     constructor(public db:AngularFireDatabase){
     }
-    getAttendancesOfStudent(student_id:number):Observable<Attendance[]>{
+    getAttendancesOfStudent(student_id:string):Observable<Attendance[]>{
+        console.log("Attendance Service : get Attendance of Student")
+        return this.db.list('Attendance/'+student_id).valueChanges()
+    }
+    getAttendancesOfStudent2(student_id:string):Observable<Attendance[]>{
         console.log("Attendance Service : get Attendance of Student")
         return this.db.list('Attendance',ref => ref.orderByChild('student_id').equalTo(student_id)).valueChanges()
     }
@@ -25,6 +29,10 @@ export class AttendanceService {
     newAttendanceDate(attendance:Attendance):boolean{
         this.db.list('Calendar/'+attendance.arrival_date).push(attendance);
         return true;
+    }
+    getAttendancesByDate(date_string:string):Observable<Attendance[]>{
+        console.log("Attendance Service : get Attendance by date")
+        return this.db.list('Calendar/'+date_string).valueChanges()
     }
     
 }

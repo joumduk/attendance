@@ -6,5 +6,10 @@
 
 <ion-content>
     <ion-calendar #calendar (onDaySelect)="onDaySelect($event)"></ion-calendar>
-    <button ion-button clear (click)="calendar.today()">Today</button>
+    <ion-content >
+        <div style="padding:10px;">
+                <button clear  (click)="reportOfSelcted()" class="btn-blue">Show Report
+                    </button>
+        </div>
+    </ion-content>
 </ion-content>

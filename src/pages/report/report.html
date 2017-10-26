@@ -1,59 +1,14 @@
 <ion-header>
     <ion-navbar>
-        <ion-title>23 / 5 / 2017</ion-title>
+        <ion-title>{{selected_date}}</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content>
     <ion-list>
-        <ion-item>
-            <ion-label>PETER kim</ion-label>
+        <ion-item *ngFor="let attendance of attendances | async">
+            <ion-label>{{attendance.student_name}}</ion-label>
             <ion-checkbox checked="true"></ion-checkbox>
         </ion-item>
-        <ion-item>
-            <ion-label>Pei tea</ion-label>
-            <ion-checkbox checked="true"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>lee kw</ion-label>
-            <ion-checkbox checked="true"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Kasper</ion-label>
-            <ion-checkbox checked="true"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>pduke</ion-label>
-            <ion-checkbox checked="true"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>joumduk</ion-label>
-            <ion-checkbox checked="true"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>weuks</ion-label>
-            <ion-checkbox checked="true"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Euk </ion-label>
-            <ion-checkbox checked="true"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Pek</ion-label>
-            <ion-checkbox checked="true"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>kim</ion-label>
-            <ion-checkbox checked="true"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>woon</ion-label>
-            <ion-checkbox checked="true"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>win</ion-label>
-            <ion-checkbox checked="true"></ion-checkbox>
-        </ion-item>
-
     </ion-list>
 </ion-content>

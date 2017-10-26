@@ -9,11 +9,16 @@ import { ReportPage } from '../report/report';
 })
 
 export class CalendarPage {
-  report=ReportPage;
+  selected_date:string;
   constructor(public navCtrl: NavController) {
    
   }
   onDaySelect(event){
-    alert(JSON.stringify(event))
+    this.selected_date=event.year+"-"+(event.month+1)+"-"+event.date;
+  }
+  reportOfSelcted(){
+    this.navCtrl.push(ReportPage, {
+      selected_date: this.selected_date
+    });
   }
 }

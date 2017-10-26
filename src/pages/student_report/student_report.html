@@ -21,15 +21,9 @@
                 </p>
             </div>
         </ion-item>
-        <ion-item>
-            <ion-card *ngIf="createdCode">
-                <ngx-qrcode  qrc-element-type="url" [qrc-value]="createdCode"></ngx-qrcode>
-                <ion-card-content>
-                </ion-card-content>
-            </ion-card>
-        </ion-item>
+        
         <ion-item *ngFor="let attendance of attendances | async">
-            <ion-label>{{attendance.arrival_time}}</ion-label>
+            <ion-label>{{attendance.arrival_date}} {{attendance.arrival_time}}</ion-label>
             <ion-checkbox checked="true"></ion-checkbox>
         </ion-item>
         <ion-item>
