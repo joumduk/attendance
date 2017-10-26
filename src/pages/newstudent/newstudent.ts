@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { EmailComposer } from '@ionic-native/email-composer';
 
+
 //page
 import { StudentsPage } from '../students/students';
 
@@ -26,7 +27,6 @@ export class NewStudentPage {
   error: string;
   constructor(public navCtrl: NavController, public storage: Storage, private studentService: StudentService,
     private emailComposer: EmailComposer ) {
-     
   }
   addstudent() {
    

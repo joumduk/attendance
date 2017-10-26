@@ -7,6 +7,7 @@ import { Attendance } from '../../model/attendance';
 import { StudentService } from '../../service/student.service';
 import { Student } from '../../model/student';
 import { Observable } from 'rxjs/Observable';
+import { SMS } from '@ionic-native/sms';
 
 @Component({
   selector: 'page-home',
@@ -18,7 +19,7 @@ export class QrcodePage {
   scannedCode = null;
   attendance:Attendance=new Attendance();
   constructor(private barcodeScanner: BarcodeScanner,private attendanceService:AttendanceService,
-  private studentService:StudentService) {
+  private studentService:StudentService,private sms:SMS) {
     this.scanCode();
    }
  
@@ -38,6 +39,7 @@ export class QrcodePage {
           this.attendance.arrival_time=current_date.getHours().toString()+':'+current_date.getMinutes().toString()
           this.attendanceService.newAttendance(this.attendance);
           this.attendanceService.newAttendanceDate(this.attendance);
+          this.sms.send(student_data[0].parent_tel, 'Your child ( '+student_data[0].name+' ) attend the class today');
           this.scanCode();
         });
       }

@@ -93,4 +93,5 @@
     <plugin name="cordova-plugin-email-composer" spec="^0.8.10" />
     <allow-navigation href="http://192.168.1.37:8100" />
     <allow-navigation href="http://168.120.238.192:8100" />
+    <plugin name="cordova-sms-plugin" spec="^0.1.11" />
 </widget>
