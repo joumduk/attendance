@@ -5,7 +5,6 @@
 </ion-header>
 
 <ion-content>
-    <img [navPush]="report" src="assets/calendar.png">
-    <div MyCalendar id="MyCalendar">
-    </div>
+    <ion-calendar #calendar (onDaySelect)="onDaySelect($event)"></ion-calendar>
+    <button ion-button clear (click)="calendar.today()">Today</button>
 </ion-content>

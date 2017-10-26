@@ -11,11 +11,11 @@ export class StudentService {
     constructor(private db:AngularFireDatabase){
         
     }
-    getStudentsOfUser(id:number):Observable<Student[]>{
+    getStudentsOfUser(id:string):Observable<Student[]>{
         console.log("Student Service: get Students list of User");
         return this.db.list('Students/',ref => ref.orderByChild('user_id').equalTo(id)).valueChanges();
     }
-    getStudent(student_id:number):Observable<Student[]>{
+    getStudent(student_id:string):Observable<Student[]>{
         console.log("Student Service: get Student Detail");
         return this.db.list('Students/',ref => ref.orderByChild('student_id').equalTo(student_id)).valueChanges();;
     }

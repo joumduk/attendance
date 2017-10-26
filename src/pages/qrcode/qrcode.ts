@@ -2,6 +2,11 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { AttendanceService } from '../../service/attendance.service';
+import { Attendance } from '../../model/attendance';
+import { StudentService } from '../../service/student.service';
+import { Student } from '../../model/student';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'page-home',
@@ -11,8 +16,9 @@ export class QrcodePage {
   qrData = null;
   createdCode = null;
   scannedCode = null;
- 
-  constructor(private barcodeScanner: BarcodeScanner) {
+  attendance:Attendance=new Attendance();
+  constructor(private barcodeScanner: BarcodeScanner,private attendanceService:AttendanceService,
+  private studentService:StudentService) {
     this.scanCode();
    }
  
@@ -22,7 +28,19 @@ export class QrcodePage {
  
   scanCode() {
     this.barcodeScanner.scan().then(barcodeData => {
-      this.scannedCode = barcodeData.text;
+      if(barcodeData.text!=""){
+        let result:Observable<Student[]>=this.studentService.getStudent(barcodeData.text);
+        result.subscribe((student_data:Student[])=>{
+          this.attendance.student_id=barcodeData.text;
+          this.attendance.student_name=student_data[0].name;
+          var current_date=new Date();
+          this.attendance.arrival_date=current_date.getFullYear().toString()+'-'+(current_date.getMonth()+1).toString()+'-'+current_date.getDate().toString()
+          this.attendance.arrival_time=current_date.getHours().toString()+':'+current_date.getMinutes().toString()
+          this.attendanceService.newAttendance(this.attendance);
+          this.attendanceService.newAttendanceDate(this.attendance);
+          this.scanCode();
+        });
+      }
     }, (err) => {
         console.log('Error: ', err);
     });

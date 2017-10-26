@@ -18,5 +18,13 @@ export class AttendanceService {
         console.log("Attendance Service : Remove Attendance of Student")
         return this.db.list('Attendance',ref => ref.orderByChild('student_id').equalTo(student_id)).valueChanges()
     }
+    newAttendance(attendance:Attendance):boolean{
+        this.db.list('Attendance/'+attendance.student_id).push(attendance);
+        return true;
+    }
+    newAttendanceDate(attendance:Attendance):boolean{
+        this.db.list('Calendar/'+attendance.arrival_date).push(attendance);
+        return true;
+    }
     
 }

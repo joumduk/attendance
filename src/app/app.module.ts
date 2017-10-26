@@ -23,7 +23,7 @@ import { AttendanceService } from '../service/attendance.service';
 import { UserService } from '../service/user.service';
 
 import { IonicStorageModule } from '@ionic/storage';
-import { Calendar } from '@ionic-native/calendar';
+import { CalendarModule } from 'ionic3-calendar';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
@@ -62,6 +62,7 @@ export const firebaseConfig = {
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
     NgxQRCodeModule,
+    CalendarModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule
@@ -88,7 +89,6 @@ export const firebaseConfig = {
     AttendanceService,
     BarcodeScanner,
     UserService,
-    Calendar,
     EmailComposer,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
