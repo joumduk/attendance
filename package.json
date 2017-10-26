@@ -23,14 +23,17 @@
     "@ionic-native/barcode-scanner": "^4.3.2",
     "@ionic-native/calendar": "^4.3.2",
     "@ionic-native/core": "4.3.0",
+    "@ionic-native/email-composer": "^4.3.2",
     "@ionic-native/splash-screen": "4.3.0",
     "@ionic-native/status-bar": "4.3.0",
     "@ionic/storage": "^2.0.1",
     "angularfire2": "^5.0.0-rc.3",
     "cordova-android": "~6.3.0",
+    "cordova-browser": "~5.0.0",
     "cordova-plugin-calendar": "^4.6.0",
     "cordova-plugin-compat": "^1.2.0",
     "cordova-plugin-device": "^1.1.4",
+    "cordova-plugin-email-composer": "^0.8.10",
     "cordova-plugin-ionic-webview": "^1.1.15",
     "cordova-plugin-splashscreen": "^4.0.3",
     "cordova-plugin-statusbar": "git+https://github.com/apache/cordova-plugin-statusbar.git",
@@ -45,8 +48,7 @@
     "promise-polyfill": "^6.0.2",
     "rxjs": "5.4.3",
     "sw-toolbox": "3.6.0",
-    "zone.js": "0.8.18",
-    "cordova-browser": "~5.0.0"
+    "zone.js": "0.8.18"
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.0.0",
@@ -63,7 +65,8 @@
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-webview": {},
-      "phonegap-plugin-barcodescanner": {}
+      "phonegap-plugin-barcodescanner": {},
+      "cordova-plugin-email-composer": {}
     },
     "platforms": [
       "android",

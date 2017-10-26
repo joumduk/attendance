@@ -9,11 +9,13 @@ import { StudentService } from '../../service/student.service';
 import { AttendanceService } from '../../service/attendance.service';
 
 
+
 @Component({
   selector: 'page-student-report',
   templateUrl: 'student_report.html'
 })
 export class StudentReportPage {
+ 
   student: Student;
   createdCode:string;
   attendances: Observable<Attendance[]>;
@@ -28,11 +30,8 @@ export class StudentReportPage {
     this.createdCode="Students/"+student_id;
   }
   removeStudent(){
-    console.log(1);
     var student_id = this.navParams.get('student_id'); 
-    console.log(2);
     this.studentService.removeStudent(student_id);
-    console.log(3);
   }
-  
+ 
 }

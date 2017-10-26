@@ -12,7 +12,9 @@ export class QrcodePage {
   createdCode = null;
   scannedCode = null;
  
-  constructor(private barcodeScanner: BarcodeScanner) { }
+  constructor(private barcodeScanner: BarcodeScanner) {
+    this.scanCode();
+   }
  
   createCode() {
     this.createdCode = this.qrData;

@@ -23,7 +23,7 @@
         </ion-item>
         <ion-item>
             <ion-card *ngIf="createdCode">
-                <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+                <ngx-qrcode  qrc-element-type="url" [qrc-value]="createdCode"></ngx-qrcode>
                 <ion-card-content>
                 </ion-card-content>
             </ion-card>

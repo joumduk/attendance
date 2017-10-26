@@ -30,6 +30,8 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { EmailComposer } from '@ionic-native/email-composer';
+
 
 export const firebaseConfig = {
   apiKey: "AIzaSyB4rQ_CxkhKIrPWfjHVL6Qvpf-GrpZM4Bc",
@@ -87,6 +89,7 @@ export const firebaseConfig = {
     BarcodeScanner,
     UserService,
     Calendar,
+    EmailComposer,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

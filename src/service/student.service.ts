@@ -19,13 +19,13 @@ export class StudentService {
         console.log("Student Service: get Student Detail");
         return this.db.list('Students/',ref => ref.orderByChild('student_id').equalTo(student_id)).valueChanges();;
     }
-    pushStudent(data:Student):boolean{
+    pushStudent(data:Student):string{
         console.log("Student Service: Add new student information");
         var aRef = this.db.list('Students').push(null);
         console.log(aRef.key);
         data.student_id=aRef.key;
         aRef.set(data);      
-        return true
+        return aRef.key
     }
     removeStudent(id:string):void{
         console.log("Student Service: Remove Student [ No."+id+" ]");
