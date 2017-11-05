@@ -14,12 +14,13 @@ When the teacher check attendance by this application, it will send SMS message 
 <ul>
  <li>Users who are teacher register student information with thier parent information to this application</li>
  <li>Generate QR Code of students</li>
- <li>Users scan QR Code of students by Camera</li> 
- <li>Application send SMS message to parents  </li>
- <li>Application supports report of each student attendance with date </li>
- <li>Application supports report of all student attendance list </li>
- 
+ <li>Users scan QR Code of students by Camera</li>
+ <li>Send E-mail to Parent with child information with QR Code [ Register student ]</li> 
+ <li>Send SMS message to parents when to attend class</li>
+ <li>Report of date : Attendance students list </li>
+ <li>Report of Studuent : Attendance Date list </li>
  </ul>
+
 
 
 
@@ -30,23 +31,49 @@ When the teacher check attendance by this application, it will send SMS message 
 - Angular2+
 - Firebase
 - QR Code
-- ZSMS Notification
+- Barcode Reader
 
-## How to use this Applcation
+## How to Install
 
-```bash
-$ sudo npm install -g ionic cordova
-```
+Click this link : <a href="https://www.dropbox.com/s/endduh3x49vpqcf/attendance.apk?dl=0">Attendance.apk</a>
+Install to your android device 
 
-Install ionic to your device 
+## How to use
 
-```bash
-$ git clone https://github.com/joumduk/attendance.git
-$ cd attendance
-$ ionic serve
-```
-Then, to download from our repository by git <Br>
-to run it, cd into `attendance` and run:
+<ul>
+    <li>Login / SignUp</li>
+    <li>Register your students<br>
+        - Go to Student tab<Br>
+        - Click "New Students" button<Br>
+        - Filled input form <Br>
+        - Click "Submit" button <Br>
+        - Registered student <Br>
+        - Send email to student's parent with student information and QR code</li>
+     <li>Remove your students<br>
+        - Go to Student tab<Br>
+        - Click Student card<Br>
+        - Show student information and attended date<Br>
+        - Click "Remove this student" button <Br>
+        - Removed student
+    </li>
+    <li>Attendance Students <Br>
+        - Go to QR code tab<Br>
+        - Scan QR code of student<Br>
+        - Automatically attend in Our system <Br>
+        - Send SMS to student's parent
+    </li>
+    <li>Students Report <Br>
+        - Go to Student tab<Br>
+        - Click Student card<Br>
+        - Show student information and attended date
+    </li>
+    <li>Date Report<Br>
+        - Go to Profile tab<Br>
+        - Click "Report" button<br> 
+        - Select date which you want to check<br> 
+        - Show sttended students' name 
+    </li>
+</ul>
 
 <h3>Known issues and bugs</h3>
 
