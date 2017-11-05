@@ -23,7 +23,7 @@ import { AttendanceService } from '../service/attendance.service';
 import { UserService } from '../service/user.service';
 
 import { IonicStorageModule } from '@ionic/storage';
-import { CalendarModule } from 'ionic3-calendar';
+
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { SMS } from '@ionic-native/sms';
@@ -32,6 +32,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { EmailComposer } from '@ionic-native/email-composer';
+import { DatePicker } from '@ionic-native/date-picker';
 
 
 export const firebaseConfig = {
@@ -63,7 +64,6 @@ export const firebaseConfig = {
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
     NgxQRCodeModule,
-    CalendarModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule
@@ -92,6 +92,7 @@ export const firebaseConfig = {
     UserService,
     SMS,
     EmailComposer,
+    DatePicker,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

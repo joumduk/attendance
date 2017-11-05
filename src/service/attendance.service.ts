@@ -30,9 +30,9 @@ export class AttendanceService {
         this.db.list('Calendar/'+attendance.arrival_date).push(attendance);
         return true;
     }
-    getAttendancesByDate(date_string:string):Observable<Attendance[]>{
+    getAttendancesByDate(date_string:string,user_id:string):Observable<Attendance[]>{
         console.log("Attendance Service : get Attendance by date")
-        return this.db.list('Calendar/'+date_string).valueChanges()
+        return this.db.list('Calendar/'+date_string,ref => ref.orderByChild('user_id').equalTo(user_id)).valueChanges()
     }
     
 }

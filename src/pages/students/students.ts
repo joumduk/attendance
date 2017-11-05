@@ -19,7 +19,6 @@ export class StudentsPage {
   newstudentpage=NewStudentPage;
   constructor(public navCtrl: NavController, storage: Storage,private studentService: StudentService) {
     storage.get('user_id').then((val) => {
-      // this.user=db.list('User').valueChanges();
       this.students=studentService.getStudentsOfUser(val);
     });
   }

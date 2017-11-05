@@ -23,12 +23,12 @@ export class StudentReportPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage, private studentService: StudentService, private attendanceService: AttendanceService) {
     var student_id = navParams.get('student_id'); 
     console.log("Student info : No.",student_id);
+    this.attendances = attendanceService.getAttendancesOfStudent(student_id);
     let result:Observable<Student[]>=studentService.getStudent(student_id);
     result.subscribe((student_data:Student[])=>{
       this.student=student_data[0]
     });
-    this.attendances = attendanceService.getAttendancesOfStudent(student_id);
-    this.createdCode="Students/"+student_id;
+    
   }
   removeStudent(){
     var student_id = this.navParams.get('student_id'); 

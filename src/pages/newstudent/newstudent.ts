@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, ViewChild, Renderer2, ElementRef } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { EmailComposer } from '@ionic-native/email-composer';

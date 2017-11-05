@@ -4,12 +4,16 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content>
-    <ion-calendar #calendar (onDaySelect)="onDaySelect($event)"></ion-calendar>
-    <ion-content >
-        <div style="padding:10px;">
-                <button clear  (click)="reportOfSelcted()" class="btn-blue">Show Report
-                    </button>
-        </div>
-    </ion-content>
+<ion-content padding>
+    <ion-list>
+    <ion-item (click)="openPicker()">
+        <ion-label >Date</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="selected_date" disabled></ion-datetime>
+    </ion-item>
+    <ion-item>
+        <button ion-button full (click)="reportOfSelcted()">Show Report</button>
+        
+    </ion-item>
+</ion-list>
+        
 </ion-content>
