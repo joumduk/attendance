@@ -8,7 +8,7 @@ import { TabsPage } from '../tabs/tabs';
 
 import { User } from '../../model/user';
 import { UserService } from '../../service/user.service';
-
+import {Md5} from 'ts-md5/dist/md5';
 @Component({
   selector: 'page-signup',
   templateUrl: 'signup.html'
@@ -32,6 +32,8 @@ export class SignupPage {
       this.error ="Already has this email address in out system";
     }else{
       this.deleteconfirm(this.user);
+      var pass=Md5.hashStr(this.user.password);
+      this.user.password=pass.toString();
       if(this.userService.pushUser(this.user)){
         this.navCtrl.push(TabsPage);
       }

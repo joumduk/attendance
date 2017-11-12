@@ -5,6 +5,7 @@ import { Storage } from '@ionic/storage';
 //page
 import { CalendarPage } from '../calendar/calendar';
 import { LoginPage } from '../login/login';
+import { EditProfilePage } from '../editProfile/editProfile';
 
 import { User } from '../../model/user';
 import { UserService } from '../../service/user.service';
@@ -17,6 +18,7 @@ import { StudentService } from '../../service/student.service';
 })
 export class ProfilePage {
   calendar = CalendarPage;
+  linkEditProfile=EditProfilePage;
   user: User;
   students: Observable<Student[]>;
   constructor(public navCtrl: NavController, public storage: Storage, private userService:UserService,private studentService:StudentService) {

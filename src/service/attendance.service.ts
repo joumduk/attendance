@@ -23,11 +23,11 @@ export class AttendanceService {
         return this.db.list('Attendance',ref => ref.orderByChild('student_id').equalTo(student_id)).valueChanges()
     }
     newAttendance(attendance:Attendance):boolean{
-        this.db.list('Attendance/'+attendance.student_id).push(attendance);
+        this.db.list('Attendance/'+attendance.student_id).set(attendance.arrival_date,attendance);
         return true;
     }
     newAttendanceDate(attendance:Attendance):boolean{
-        this.db.list('Calendar/'+attendance.arrival_date).push(attendance);
+        this.db.list('Calendar/'+attendance.arrival_date).set(attendance.student_id,attendance);
         return true;
     }
     getAttendancesByDate(date_string:string,user_id:string):Observable<Attendance[]>{

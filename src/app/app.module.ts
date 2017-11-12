@@ -14,6 +14,8 @@ import { CalendarPage } from '../pages/calendar/calendar';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { NewStudentPage } from '../pages/newstudent/newstudent';
+import { EditProfilePage } from '../pages/editProfile/editProfile';
+import { EditStudentPage } from '../pages/editstudent/editstudent';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -33,6 +35,7 @@ import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/dat
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { EmailComposer } from '@ionic-native/email-composer';
 import { DatePicker } from '@ionic-native/date-picker';
+import {Md5} from 'ts-md5/dist/md5';
 
 
 export const firebaseConfig = {
@@ -55,7 +58,9 @@ export const firebaseConfig = {
     CalendarPage,
     NewStudentPage,
     StudentReportPage,
+    EditStudentPage,
     LoginPage,
+    EditProfilePage,
     SignupPage,
     TabsPage
   ],
@@ -78,7 +83,9 @@ export const firebaseConfig = {
     CalendarPage,
     LoginPage,
     SignupPage,
+    EditStudentPage,
     StudentReportPage,
+    EditProfilePage,
     NewStudentPage,
     TabsPage
   ],
@@ -89,6 +96,7 @@ export const firebaseConfig = {
     StudentService,
     AttendanceService,
     BarcodeScanner,
+    Md5,
     UserService,
     SMS,
     EmailComposer,

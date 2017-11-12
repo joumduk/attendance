@@ -8,6 +8,8 @@ import { Attendance } from '../../model/attendance';
 import { StudentService } from '../../service/student.service';
 import { AttendanceService } from '../../service/attendance.service';
 
+import { EditStudentPage } from '../editstudent/editstudent';
+
 import { StudentsPage } from '../students/students'
 
 
@@ -16,7 +18,6 @@ import { StudentsPage } from '../students/students'
   templateUrl: 'student_report.html'
 })
 export class StudentReportPage {
- 
   student: Student;
   createdCode:string;
   attendances: Observable<Attendance[]>;
@@ -35,5 +36,10 @@ export class StudentReportPage {
     this.studentService.removeStudent(student_id);
     this.navCtrl.setRoot(StudentsPage);
   }
- 
+  editStudent(){
+    var student_id = this.navParams.get('student_id'); 
+    this.navCtrl.push(EditStudentPage, {
+      student_id: student_id
+    });
+  }
 }

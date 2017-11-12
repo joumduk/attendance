@@ -31,5 +31,10 @@ export class StudentService {
         console.log("Student Service: Remove Student [ No."+id+" ]");
         this.db.list("Students/"+id).remove().then(_ => console.log('item deleted!'));        
     }
+    updateStudent(data:Student):boolean{
+        console.log(JSON.stringify(data));
+        this.db.list('Students').set(data.student_id,data);
+        return true
+    }
     
 }

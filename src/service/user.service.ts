@@ -30,4 +30,9 @@ export class UserService {
         aRef.set(data);      
         return true
     }
+    updatehUser(data:User):boolean{
+        console.log(JSON.stringify(data));
+        this.db.list('User').set(data.id+"",data);
+        return true
+    }
 }

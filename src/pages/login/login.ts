@@ -10,6 +10,7 @@ import { TabsPage } from '../tabs/tabs';
 
 import { User } from '../../model/user';
 import { UserService } from '../../service/user.service';
+import {Md5} from 'ts-md5/dist/md5';
 
 @Component({
   selector: 'page-login',
@@ -33,7 +34,8 @@ export class LoginPage {
     if (userlist) {
       userlist.forEach((val) => {
         if (val.length > 0) {
-          if (val[0].password == this.userdata.password) {
+          var pass=Md5.hashStr(this.userdata.password);
+          if (val[0].password == pass.toString()) {
             this.storage.set("user_id", val[0].id);
             this.navCtrl.push(TabsPage);
           }
