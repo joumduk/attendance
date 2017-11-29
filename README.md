@@ -1,3 +1,5 @@
+<img src="gs://attendant-d0ea8.appspot.com/poster.jpg" style="width:100%"/>
+
 <h2>Attendance Notification - SMS</h2>
 
 
