@@ -4,7 +4,8 @@
 
 
 <h3>Contributors</h3>
-Kwangmin Kim 5738001
+
+Kwangmin Kim ( Peter ) - Computer Science Student [ Assumption University ]
 
 <h3>Description</h3>
 
