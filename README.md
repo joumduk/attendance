@@ -82,3 +82,5 @@ Install to your android device
 - SMS message is not free that can occure error from less balance
 - I should combine between QR code reader and checking attendance
 
+<h3>Presentation File </h3>
+ - <a href="https://docs.google.com/presentation/d/1oB8ZWJYlKwpMOmmaYeY94OVJE87Ca8GsSvjXk7E6824/edit?usp=sharing"> Click </a>
