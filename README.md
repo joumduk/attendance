@@ -87,4 +87,4 @@ Install to your android device
  - <a href="https://docs.google.com/presentation/d/1oB8ZWJYlKwpMOmmaYeY94OVJE87Ca8GsSvjXk7E6824/edit?usp=sharing"> Click </a>
 
 <h3> Poster File </h3>
-  - <a href="https://firebasestorage.googleapis.com/v0/b/attendant-d0ea8.appspot.com/o/poster2.psd?alt=media&token=3695520f-86bf-4b95-bfec-578ca376adb3"> Click</a>
+  - <a href="https://firebasestorage.googleapis.com/v0/b/attendant-d0ea8.appspot.com/o/poster2.psd?alt=media&token=3695520f-86bf-4b95-bfec-578ca376adb3"> Download </a>
