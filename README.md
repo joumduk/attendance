@@ -1,4 +1,4 @@
-<img src="https://firebasestorage.googleapis.com/v0/b/attendant-d0ea8.appspot.com/o/poster2.jpg?alt=media&token=c239ce44-2ddc-4bf5-bb59-d769c1f0b5ab" style="width:100%;border:1px solid #ddd;"/>
+<img src="https://firebasestorage.googleapis.com/v0/b/attendant-d0ea8.appspot.com/o/poster2.jpg?alt=media&token=31e7c0a4-de41-49f4-9b51-f4166565d43c" style="width:100%;border:1px solid #ddd;"/>
 
 <h2>Attendance Notification - SMS</h2>
 
